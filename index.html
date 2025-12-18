@@ -1,0 +1,795 @@
+<!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apna PG</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .header {
+      position: relative;
+      color: white;
+      padding-bottom: 40px;
+      background: url('https://www.pexels.com/photo/aesthetic-background-1234567/') no-repeat center center/cover;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 25px rgb(19, 19, 19);
+      padding: 20px 50px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f5f0f0; /* Adjusted for better contrast */
+      box-shadow: 0 10px 25px rgb(19, 19, 19);
+      animation: fadeInRight 1s ease-out;
+}
+    
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      color: #f9f1f1; /* Adjusted for better contrast */
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffffff;
+    }
+
+    .auth-buttons .btn {
+      background: transparent;
+      border: 2px solid #f9f3f2; /* Adjusted for better contrast */
+      color: #f3efee; /* Adjusted for better contrast */
+      padding: 8px 16px;
+      margin-left: 10px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .auth-buttons .btn:hover {
+      background: #8dbad2; /* Adjusted for better contrast */
+      color: #333;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 50px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .explore-btn {
+      background-color: #ff6f61;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .explore-btn:hover {
+      background-color: #e05245;
+    }
+
+    .hero-image img {
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      animation: fadeInRight 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">🏠 Apna PG</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="browse.html">Browse PGs</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html"><button class="btn login">Login</button></a>
+       <a href="register.html">  <button class="btn signup">Sign Up</button></a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Find Your Perfect PG</h1>
+        <p>Verified, Affordable, and Comfortable stays for students & professionals.</p>
+        <a href="Explore PGs.html" class="btn explore-btn">Explore PGs Near You</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://img.freepik.com/free-vector/young-man-having-fun-modern-cozy-room_74855-5513.jpg" alt="PG Room Illustration">
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>
+
+
+
+<!-- hero.html -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Discover Your Perfect PG</h1>
+      <p>Affordable, verified, and comfortable living spaces for students and professionals across India.</p>
+      <a href="Explore now.html" class="hero-btn">Explore Now</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://i.pinimg.com/originals/7a/15/5c/7a155c73ac916989ba9297bdc7d5b786.jpg" alt="Aesthetic PG Room">
+    </div>
+  </div>
+</section>
+
+<!-- featured-pgs.html -->
+<style>
+    .featured-section {
+      background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #333;
+      animation: fadeIn 1s ease;
+    }
+  
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px 10px;
+    }
+  
+    .pg-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 0.8s ease-in-out;
+    }
+  
+    .pg-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+  
+    .pg-card img {
+      width: 100%;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+    }
+  
+    .pg-details {
+      padding: 15px;
+      text-align: left;
+    }
+  
+    .pg-details h3 {
+      font-size: 1.2rem;
+      margin: 0 0 8px;
+      color: #333;
+    }
+  
+    .pg-details p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  
+    .price {
+      color: #009688;
+      font-weight: bold;
+    }
+  
+    .rating {
+      color: #ff9800;
+      margin-bottom: 10px;
+    }
+  
+    .view-btn {
+      display: inline-block;
+      padding: 8px 14px;
+      background-color: #009688;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .view-btn:hover {
+      background-color: #00796b;
+    }
+  
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  
+  <section class="featured-section">
+    <h2 class="section-title">🏠 Featured PGs</h2>
+    <div class="carousel">
+      <!-- Sample PGs below -->
+      <div class="pg-card">
+        <img src="https://img.freepik.com/premium-photo/blue-sign-that-says-beer-it_875037-18526.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="PG Room">
+        <div class="pg-details">
+          <h3>Sunrise Residency</h3>
+          <p>📍 Koramangala, Bangalore</p>
+          <p class="price">Starts from ₹6,500/month</p>
+          <div class="rating">⭐ 4.5</div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+      <div class="pg-card">
+        <img src="https://img.freepik.com/premium-photo/bedroom-interior_1048944-15522580.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="PG Room">
+        <div class="pg-details">
+          <h3>Urban Nest</h3>
+          <p>📍 Viman Nagar, Pune</p>
+          <p class="price">Starts from ₹5,200/month</p>
+          <div class="rating">⭐ 4.3</div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+      <div class="pg-card">
+        <img src="https://img.freepik.com/free-photo/bedroom-interior_53876-32151.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="PG Room">
+        <div class="pg-details">
+          <h3>Green Stay</h3>
+          <p>📍 HSR Layout, Bangalore</p>
+          <p class="price">Starts from ₹7,000/month</p>
+          <div class="rating">⭐ 4.8</div>
+          <a href="#" class="view-btn">View Details</a>
+        </div>
+      </div>
+  
+      <!-- More PGs (add as needed) -->
+      <div class="pg-card"><img src="https://img.freepik.com/premium-photo/luxury-room-with-bed-warm-light-india-style_24637-629.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>City View PG</h3><p>📍 Andheri, Mumbai</p><p class="price">₹6,200/month</p><div class="rating">⭐ 4.6</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/free-photo/luxury-bedroom-with-elegant-decoration_1150-10836.jpg" alt=""><div class="pg-details"><h3>Elite Living</h3><p>📍 Banjara Hills, Hyderabad</p><p class="price">₹7,800/month</p><div class="rating">⭐ 4.7</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/free-photo/3d-rendering-luxury-bedroom-suite-resort-hotel-with-twin-bed-living_105762-2018.jpg?ga=GA1.1.1406031230.1744216748&semt=ais_country_boost&w=740" alt=""><div class="pg-details"><h3>Serene Stay</h3><p>📍 Salt Lake, Kolkata</p><p class="price">₹5,400/month</p><div class="rating">⭐ 4.4</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/free-photo/young-friends-hostel_52683-121727.jpg?ga=GA1.1.1406031230.1744216748&semt=ais_country_boost&w=740" alt=""><div class="pg-details"><h3>Comfort Corner</h3><p>📍 Civil Lines, Delhi</p><p class="price">₹6,000/month</p><div class="rating">⭐ 4.2</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/premium-photo/clean-minimalistic-hostel-room-with-bunk-bed-white-bedding-small-wooden-bedside-table-ideal-budget-travelers-seeking-affordable-accommodation-cheap-hostels-save-money_429124-7216.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Budget PG</h3><p>📍 Sector 62, Noida</p><p class="price">₹4,500/month</p><div class="rating">⭐ 4.0</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/premium-photo/italy-mediterranean-sea-fiumicino-rome-10-july-2003-luxury-yacht-guests-bedroom-editorial-film-scan_857279-12673.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Vista Rooms</h3><p>📍 Navi Mumbai</p><p class="price">₹5,900/month</p><div class="rating">⭐ 4.6</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/premium-photo/small-room-with-bed-that-has-tv-top-it_1081342-40399.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Harmony Homes</h3><p>📍 Wakad, Pune</p><p class="price">₹6,100/month</p><div class="rating">⭐ 4.4</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/premium-photo/bedroom-apartment-bed-wardrobe-bedside-tables_278455-3985.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Tranquil PG</h3><p>📍 Whitefield, Bangalore</p><p class="price">₹6,300/month</p><div class="rating">⭐ 4.7</div><a href="#" class="view-btn">View Details</a></div></div>
+      <div class="pg-card"><img src="https://img.freepik.com/free-photo/3d-rendering-luxury-modern-bedroom-suite-hotel-with-tv-cabinet_105762-2274.jpg?ga=GA1.1.1406031230.1744216748&w=740"  alt=""><div class="pg-details"><h3>Metro Nest</h3><p>📍 Lajpat Nagar, Delhi</p><p class="price">₹6,800/month</p><div class="rating">⭐ 4.8</div><a href="#" class="view-btn">View Details</a></div></div>
+    </div>
+  </section>
+  
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Why Choose Us?</title>
+      <style>
+          /* why-choose-us.css */
+          .why-choose-us {
+              position: relative;
+              padding: 50px 20px;
+              background: linear-gradient(135deg, #f3f4f6 25%, transparent 25%) -50px 0,
+                          linear-gradient(225deg, #f3f4f6 25%, transparent 25%) -50px 0,
+                          linear-gradient(315deg, #f3f4f6 25%, transparent 25%),
+                          linear-gradient(45deg, #f3f4f6 25%, transparent 25%);
+              background-size: 100px 100px;
+              animation: backgroundAnimation 10s linear infinite;
+          }
+  
+          @keyframes backgroundAnimation {
+              0% {
+                  background-position: 0 0, 0 0, 0 0, 0 0;
+              }
+              100% {
+                  background-position: 100px 100px, 100px 100px, -100px -100px, -100px -100px;
+              }
+          }
+  
+          .section-heading {
+              text-align: center;
+              font-size: 2.5em;
+              margin-bottom: 30px;
+              color: #333;
+          }
+  
+          .features {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 20px;
+          }
+  
+          .feature-card {
+              background: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+              padding: 20px;
+              text-align: center;
+              width: 250px;
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+  
+          .feature-card:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          }
+  
+          .feature-card img {
+              width: 60px;
+              height: 60px;
+              margin-bottom: 15px;
+          }
+  
+          .feature-card h3 {
+              font-size: 1.5em;
+              margin-bottom: 10px;
+              color: #333;
+          }
+  
+          .feature-card p {
+              font-size: 1em;
+              color: #666;
+          }
+      </style>
+  </head>
+  <body>
+      <!-- why-choose-us.html -->
+      <section class="why-choose-us">
+          <h2 class="section-heading">✨ Why Choose Us?</h2>
+          <div class="features">
+              <div class="feature-card">
+                  <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Verified Listings">
+                  <h3>Verified Listings</h3>
+                  <p>All PGs are quality checked and verified to ensure a safe and comfortable stay.</p>
+              </div>
+  
+              <div class="feature-card">
+                  <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" alt="24/7 Support">
+                  <h3>24/7 Support</h3>
+                  <p>Need help? Our team is available around the clock to assist you anytime.</p>
+              </div>
+  
+              <div class="feature-card">
+                  <img src="https://cdn-icons-png.flaticon.com/512/5957/5957480.png" alt="No Brokerage">
+                  <h3>No Brokerage</h3>
+                  <p>We connect you directly with PG owners. Say goodbye to middlemen and hidden fees.</p>
+              </div>
+  
+              <div class="feature-card">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4205/4205215.png" alt="Flexible Stay">
+                  <h3>Flexible Stay</h3>
+                  <p>Whether it's a short stay or long-term rental, we offer flexible options for everyone.</p>
+              </div>
+          </div>
+      </section>
+  </body>
+  </html>
+  
+  
+  <!-- testimonials.html -->
+<section class="testimonials-section">
+    <h2 class="section-title">💬 What Our Users Say</h2>
+    <div class="testimonials-carousel">
+  
+      <div class="testimonial-card">
+        <img src="https://img.freepik.com/free-photo/girl-with-camera_23-2148011692.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="User 1">
+        <h3>Ritika Sharma</h3>
+        <p class="location">Student, Delhi University</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“Apna PG helped me find a clean and secure place near my college in just 2 days. Highly recommended!”</p>
+      </div>
+  
+      <div class="testimonial-card">
+        <img src="https://img.freepik.com/free-photo/portrait-young-man-with-backpack-his-back_158595-3450.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="User 2">
+        <h3>Aditya Mehta</h3>
+        <p class="location">Working Professional, Pune</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“The no brokerage promise is real. Got a great room without paying extra. Support team is very responsive.”</p>
+      </div>
+  
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User 3">
+        <h3>Priya Sinha</h3>
+        <p class="location">Intern, Bangalore</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Flexible stay options really helped during my short internship. Wi-Fi and meals were a big plus.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://img.freepik.com/free-photo/businessman-with-jacket_23-2147996566.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="User 3">
+        <h3>Shubhdeep Roy</h3>
+        <p class="location">Student, Noida</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Finding a PG that felt like home seemed impossible until I discovered Apna PG. The amenities are top-notch, and the supportive environment made my transition to a new city seamless.”</p>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <!-- location-map.html -->
+<section class="location-map-section">
+    <h2 class="section-title">📍 Find PGs Near You</h2>
+    <p class="map-description">Explore top-rated PG clusters in popular locations. Click on the pins for details!</p>
+    
+    <div id="map"></div>
+  </section>
+  
+  <!-- Google Maps Script (load at the end of body) -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+  
+  <script>
+    function initMap() {
+      const center = { lat: 28.6139, lng: 77.2090 }; // Default to Delhi
+  
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center,
+      });
+  
+      const pgLocations = [
+        {
+          position: { lat: 28.7041, lng: 77.1025 },
+          title: "PG in Karol Bagh",
+          content: "Karol Bagh PG<br>₹8,000/month"
+        },
+        {
+          position: { lat: 28.5355, lng: 77.3910 },
+          title: "PG in Noida",
+          content: "Noida Sector 62 PG<br>₹7,500/month"
+        },
+        {
+          position: { lat: 28.4595, lng: 77.0266 },
+          title: "PG in Gurgaon",
+          content: "DLF Phase 2 PG<br>₹10,000/month"
+        }
+      ];
+  
+      pgLocations.forEach(loc => {
+        const marker = new google.maps.Marker({
+          position: loc.position,
+          map,
+          title: loc.title
+        });
+  
+        const infoWindow = new google.maps.InfoWindow({
+          content: loc.content
+        });
+  
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Section</title>
+    <style>
+        /* Footer Section Styles */
+        .footer-section {
+            background-color: #2c3e50;
+            color: #851a1a;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 220px;
+            margin: 20px 0;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            position: relative;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #ffcc00;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #170303;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .newsletter-form input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ffcc00;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: #e6b800;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgb(235, 228, 228);
+        }
+
+        /* Animated Background */
+        .footer-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4MCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMjgwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTI4MCAwQzEyODAgMCA5NjAgMCA2NDAgMEMzMjAgMCAwIDAgMCAwVjEwMGMwIDAgMzIwIDAgNjQwIDBzNjQwIDAgNjQwIDBWMEgxMjgwWiIgZmlsbD0iI2ZmY2MwMCIvPjwvc3ZnPg==') repeat-x;
+            animation: waveAnimation 10s linear infinite;
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        @keyframes waveAnimation {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 1280px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Quick Links -->
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="Explore PGs.html">PG Listings</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p>Get updates & offers straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Social Icons -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Apna PG. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Explore PGs.html">PG Listings</a></li>
+          <li><a href="why choose us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy policy.html">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Newsletter</h4>
+        <p>Get updates & offers straight to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Apna PG. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+  
+  
+  
+  

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f3f4f6 25%, transparent 25%) -50px 0,
+                        linear-gradient(225deg, #f3f4f6 25%, transparent 25%) -50px 0,
+                        linear-gradient(315deg, #f3f4f6 25%, transparent 25%),
+                        linear-gradient(45deg, #f3f4f6 25%, transparent 25%);
+            background-size: 100px 100px;
+            animation: backgroundAnimation 10s linear infinite;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0 0, 0 0, 0 0, 0 0;
+            }
+            100% {
+                background-position: 100px 100px, 100px 100px, -100px -100px, -100px -100px;
+            }
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about-us h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #222;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards 0.2s;
+        }
+
+        .about-us p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #555;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s forwards 0.4s;
+        }
+
+        /* Team Section */
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .team-member {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .team-member:nth-child(1) { animation-delay: 0.2s; }
+        .team-member:nth-child(2) { animation-delay: 0.4s; }
+        .team-member:nth-child(3) { animation-delay: 0.6s; }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-us h1 {
+                font-size: 2.5em;
+            }
+
+            .about-us p {
+                font-size: 1em;
+            }
+
+            .team-member {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h1>About Us</h1>
+        <p>Welcome to our company! We are dedicated to delivering the best services to our clients. Our team of experts works tirelessly to ensure customer satisfaction and excellence in all we do.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Team Member 1">
+            <h3>Jane Doe</h3>
+            <p>CEO & Founder</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Team Member 2">
+            <h3>John Smith</h3>
+            <p>Chief Technical Officer</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Team Member 3">
+            <h3>Emily Johnson</h3>
+            <p>Head of Marketing</p>
+        </div>
+    </section>
+
+</body>
+</html>

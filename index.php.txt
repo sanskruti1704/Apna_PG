@@ -1,0 +1,57 @@
+<!-- header.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apna PG</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">🏠 Apna PG</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse PGs</a></li>
+        <li><a href="#">Amenities</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="btn login">Login</button>
+        <button class="btn signup">Sign Up</button>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Find Your Perfect PG</h1>
+        <p>Verified, Affordable, and Comfortable stays for students & professionals.</p>
+        <a href="#" class="btn explore-btn">Explore PGs Near You</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://img.freepik.com/free-vector/young-man-having-fun-modern-cozy-room_74855-5513.jpg" alt="PG Room Illustration">
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>
+
+<!-- hero.html -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Discover Your Perfect PG</h1>
+      <p>Affordable, verified, and comfortable living spaces for students and professionals across India.</p>
+      <a href="#" class="hero-btn">Explore Now</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://img.freepik.com/free-vector/room-interior-concept-illustration_114360-11011.jpg" alt="PG Illustration">
+    </div>
+  </div>
+</section>
+

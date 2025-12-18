@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apna PG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & BASE */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; background: #fff; color: #333; }
+    img { max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* UTILITY */
+    .btn { padding: 0.75rem 1.5rem; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s ease; }
+    .btn:hover { background: #0056b3; }
+
+    /* HEADER */
+    .header { background: #f4f4f4; padding-bottom: 2rem; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .logo { font-size: 1.5rem; font-weight: bold; color: #007bff; }
+    .nav-links { list-style: none; display: flex; gap: 1rem; }
+    .nav-links a { font-weight: 500; padding: 0.5rem; }
+    .auth-buttons .btn { margin-left: 0.5rem; }
+
+    /* HERO */
+    .hero { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 2rem; background: #e6f0ff; }
+    .hero-text { max-width: 500px; padding: 1rem; }
+    .hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero-image img { border-radius: 10px; max-height: 300px; }
+
+    /* SECTION */
+    section { padding: 3rem 2rem; text-align: center; }
+    .section-title, .section-heading { font-size: 2rem; margin-bottom: 2rem; color: #333; }
+
+
+       /* Footer */
+       footer {
+      background: #222;
+      color: #eee;
+      padding: 40px 20px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-column h4 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin: 6px 0;
+    }
+
+    .footer-column ul a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .newsletter-form input {
+      padding: 8px;
+      width: 100%;
+      border: none;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      border-radius: 4px;
+    }
+
+    .newsletter-form button {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .social-icons img {
+      width: 24px;
+      margin-right: 10px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .social-icons img:hover {
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">🏠 Apna PG</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="browse.html">Browse PGs</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html"><button class="btn login">Login</button></a>
+        <a href="register.html">  <button class="btn signup">Sign Up</button></a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Find Your Perfect PG</h1>
+        <p>Verified, Affordable, and Comfortable stays for students & professionals.</p>
+        <a href="Explore PGs.html" class="btn explore-btn">Explore PGs Near You</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://img.freepik.com/free-vector/young-man-having-fun-modern-cozy-room_74855-5513.jpg" alt="PG Room">
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="browse.html">PG Listings</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Newsletter</h4>
+        <p>Get updates & offers straight to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Apna PG. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Google Maps Script -->
+  <script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <script>
+    function initMap() {
+      const center = { lat: 28.6139, lng: 77.2090 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center,
+      });
+
+      const pgLocations = [
+        { position: { lat: 28.7041, lng: 77.1025 }, title: "PG in Karol Bagh", content: "Karol Bagh PG<br>₹8,000/month" },
+        { position: { lat: 28.5355, lng: 77.3910 }, title: "PG in Noida", content: "Noida Sector 62 PG<br>₹7,500/month" },
+        { position: { lat: 28.4595, lng: 77.0266 }, title: "PG in Gurgaon", content: "DLF Phase 2 PG<br>₹10,000/month" }
+      ];
+
+      pgLocations.forEach(loc => {
+        const marker = new google.maps.Marker({ position: loc.position, map, title: loc.title });
+        const infoWindow = new google.maps.InfoWindow({ content: loc.content });
+        marker.addListener("click", () => { infoWindow.open(map, marker); });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apna PG | Testimonials</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .auth-buttons .btn {
+      margin-left: 1rem;
+      padding: 0.4rem 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .login {
+      background: transparent;
+      color: #007bff;
+      border: 1px solid #007bff;
+    }
+
+    .signup {
+      background: #007bff;
+      color: white;
+    }
+
+    .testimonials-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #222;
+    }
+
+    .testimonials-carousel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+      color: #333;
+    }
+
+    .location {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 0.5rem;
+    }
+
+    .stars {
+      color: gold;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .review {
+      font-style: italic;
+      color: #444;
+    }
+
+    footer {
+      background: #222;
+      color: #eee;
+      padding: 2rem 2rem 1rem;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .newsletter-form input {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      width: 70%;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .newsletter-form button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bbb;
+      border-top: 1px solid #444;
+      padding-top: 1rem;
+    }
+
+    .social-icons a img {
+      width: 24px;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🏠 Apna PG</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="browse.html">Browse PGs</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html"><button class="btn login">Login</button></a>
+       <a href="register.html">  <button class="btn signup">Sign Up</button></a>
+       
+      </div>
+    </nav>
+  </header>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <h2 class="section-title">💬 What Our Users Say</h2>
+    <div class="testimonials-carousel">
+
+      <div class="testimonial-card">
+        <img src="https://img.freepik.com/free-photo/girl-with-camera_23-2148011692.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="User 1">
+        <h3>Ritika Sharma</h3>
+        <p class="location">Student, Delhi University</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“Apna PG helped me find a clean and secure place near my college in just 2 days. Highly recommended!”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://img.freepik.com/free-photo/portrait-young-man-with-backpack-his-back_158595-3450.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="User 2">
+        <h3>Aditya Mehta</h3>
+        <p class="location">Working Professional, Pune</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“The no brokerage promise is real. Got a great room without paying extra. Support team is very responsive.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User 3">
+        <h3>Priya Sinha</h3>
+        <p class="location">Intern, Bangalore</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Flexible stay options really helped during my short internship. Wi-Fi and meals were a big plus.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://img.freepik.com/free-photo/businessman-with-jacket_23-2147996566.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="User 3">
+        <h3>Shubhdeep Roy</h3>
+        <p class="location">Student, Noida</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Finding a PG that felt like home seemed impossible until I discovered Apna PG. The amenities are top-notch, and the supportive environment made my transition to a new city seamless.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="User 3">
+        <h3>Neha Verma</h3>
+        <p class="location">Student, Bangalore</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“Apna PG made my move to Bangalore seamless. The accommodation is comfortable and close to my university.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="User 4">
+        <h3>Rahul Desai</h3>
+        <p class="location">Engineer, Hyderabad</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Found a great place through Apna PG. The amenities are top-notch, and the commute to work is minimal.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/46.jpg" alt="User 5">
+        <h3>Ananya Iyer</h3>
+        <p class="location">Intern, Chennai</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“The listings on Apna PG are reliable. I secured a safe and friendly PG during my internship.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="User 6">
+        <h3>Amit Gupta</h3>
+        <p class="location">Consultant, Mumbai</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Apna PG offers a variety of options. I found a place that fits my budget and lifestyle perfectly.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="User 7">
+        <h3>Pooja Singh</h3>
+        <p class="location">Designer, Kolkata</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“Thanks to Apna PG, I found a PG with a creative environment that suits my profession.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="User 8">
+        <h3>Vikram Joshi</h3>
+        <p class="location">Analyst, Gurgaon</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“The PG I found through Apna PG is well-maintained and in a prime location.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="User 9">
+        <h3>Simran Kaur</h3>
+        <p class="location">Student, Chandigarh</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“Apna PG's platform is user-friendly. I quickly found a PG that feels like home.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="User 10">
+        <h3>Arjun Nair</h3>
+        <p class="location">Doctor, Kochi</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“Found a peaceful and clean PG through Apna PG, ideal for my demanding schedule.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/49.jpg" alt="User 11">
+        <h3>Meera Pillai</h3>
+        <p class="location">Researcher, Pune</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="review">“Apna PG provided excellent options. I chose a PG that offers a conducive environment for my research.”</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/37.jpg" alt="User 12">
+        <h3>Sandeep Reddy</h3>
+        <p class="location">Entrepreneur, Hyderabad</p>
+        <div class="stars">⭐⭐⭐⭐</div>
+        <p class="review">“The PG I found through Apna PG offers great networking opportunities with like-minded individuals.”</p>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="browse.html">PG Listings</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Newsletter</h4>
+        <p>Get updates & offers straight to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Apna PG. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

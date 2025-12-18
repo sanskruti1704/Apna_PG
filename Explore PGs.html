@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore PGs Near You | Apna PG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #fff;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .explore-hero {
+      padding: 2rem;
+      text-align: center;
+      background-color: #e0f7fa;
+    }
+
+    .explore-hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .explore-hero p {
+      color: #555;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 1rem;
+    }
+
+    .search-bar input {
+      padding: 0.8rem 1rem;
+      width: 300px;
+      max-width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      font-size: 1rem;
+    }
+
+    .search-bar button {
+      padding: 0.8rem 1.2rem;
+      background-color: #00796b;
+      color: #fff;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .filters {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .filters button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      background-color: #f1f1f1;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .filters button.active {
+      background-color: #00796b;
+      color: #fff;
+    }
+
+    .pg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .pg-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .pg-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pg-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .pg-info {
+      padding: 1rem;
+    }
+
+    .pg-info h3 {
+      margin: 0.2rem 0;
+      font-size: 1.2rem;
+    }
+
+    .pg-info p {
+      margin: 0.2rem 0;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .pg-info .price {
+      font-weight: bold;
+      color: #00796b;
+      margin-top: 0.5rem;
+    }
+
+    .pg-info .rating {
+      color: #ffa000;
+      margin-top: 0.3rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🏠 Apna PG</div>
+  </header>
+
+  <section class="explore-hero">
+    <h1>Explore PGs Near You</h1>
+    <p>Find PG accommodations in top locations with ease.</p>
+  </section>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by location (e.g., Pune, Bangalore)">
+    <button onclick="filterPGs()">Search</button>
+  </div>
+
+  <div class="filters">
+    <button onclick="filterBy('all')" class="active">All</button>
+    <button onclick="filterBy('low')">Below ₹6000</button>
+    <button onclick="filterBy('mid')">₹6000 - ₹8000</button>
+    <button onclick="filterBy('high')">Above ₹8000</button>
+  </div>
+
+  <section class="pg-grid" id="pgList">
+    <!-- Cards will be generated here by JS -->
+  </section>
+
+  <footer>
+    &copy; 2025 Apna PG. All rights reserved.
+  </footer>
+
+  <script>
+    const pgData = [
+      {
+        name: "Rosewood Manor",
+        location: "HSR Layout, Bangalore",
+        price: 6500,
+        image: "https://img.freepik.com/premium-photo/3-boys-room-design_815143-873.jpg?ga=GA1.1.1406031230.1744216748&w=740",
+        rating: 4.5
+      },
+      {
+        name: "Lavender Cottage",
+        location: "DLF Phase 2, Gurgaon",
+        price: 5200,
+        image: "https://img.freepik.com/premium-photo/modern-minimalist-bunk-room-design_1310085-51105.jpg?ga=GA1.1.1406031230.1744216748&w=740",
+        rating: 4.3
+      },
+      {
+        name: "Meadow View",
+        location: "Koramangala, Bangalore",
+        price: 7000,
+        image: "https://img.freepik.com/premium-photo/bedroom-with-bunk-bed-tv-it_875037-18293.jpg?ga=GA1.1.1406031230.1744216748&w=740",
+        rating: 4.8
+      },
+      {
+        name: "Anand Bhawan",
+        location: "Viman Nagar, Pune",
+        price: 8500,
+        image: "https://img.freepik.com/premium-photo/bedroom-with-purple-white-pillows-purple-bed-with-pink-headboard_875037-15850.jpg?ga=GA1.1.1406031230.1744216748&w=740",
+        rating: 4.7
+      },
+      {
+        name: "Bog View",
+        location: "Noida Sector 62",
+        price: 9500,
+        image: "https://img.freepik.com/premium-photo/no-humans-scenery-computer-chair-indoors-plant-bed_943272-1526.jpg?ga=GA1.1.1406031230.1744216748&w=740",
+        rating: 4.6
+      }
+    ];
+
+    function renderPGs(list) {
+      const container = document.getElementById("pgList");
+      container.innerHTML = '';
+      list.forEach(pg => {
+        container.innerHTML += `
+          <div class="pg-card">
+            <img src="${pg.image}" alt="${pg.name}">
+            <div class="pg-info">
+              <h3>${pg.name}</h3>
+              <p>📍 ${pg.location}</p>
+              <p class="price">₹${pg.price}/month</p>
+              <p class="rating">⭐ ${pg.rating}</p>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function filterPGs() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = pgData.filter(pg => pg.location.toLowerCase().includes(input));
+      renderPGs(filtered);
+    }
+
+    function filterBy(range) {
+      document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      let filtered;
+      if (range === 'low') {
+        filtered = pgData.filter(pg => pg.price < 6000);
+      } else if (range === 'mid') {
+        filtered = pgData.filter(pg => pg.price >= 6000 && pg.price <= 8000);
+      } else if (range === 'high') {
+        filtered = pgData.filter(pg => pg.price > 8000);
+      } else {
+        filtered = pgData;
+      }
+
+      renderPGs(filtered);
+    }
+
+    window.onload = () => renderPGs(pgData);
+  </script>
+
+</body>
+</html>

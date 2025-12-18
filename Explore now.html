@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore PGs Near You | Apna PG</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .explore-hero {
+      background: url('https://img.freepik.com/free-vector/map-pin-concept-illustration_114360-1804.jpg') no-repeat center center/cover;
+      color: #140101;
+      box-shadow: 0 10px 25px rgb(19, 19, 19);
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .explore-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+
+    .pg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .pg-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .pg-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pg-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .pg-details {
+      padding: 1rem;
+    }
+
+    .pg-details h3 {
+      margin: 0.500rem 0;
+    }
+
+    .pg-details p {
+      margin: 0.3rem 0;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #28a745;
+    }
+
+    .rating {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+
+    .view-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: #007bff;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">🏠 Apna PG</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="browse.html">Browse PGs</a></li>
+        <li><a href="amenities.html">Amenities</a></li>
+        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="explore-hero">
+    <h1>Explore PGs Near You</h1>
+  </section>
+
+  <section class="pg-grid">
+
+    <div class="pg-card">
+      <img src="https://img.freepik.com/premium-photo/interior-illuminated-house-home_1048944-28682564.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="Ivy Cottage">
+      <div class="pg-details">
+        <h3>Ivy Cottage</h3>
+        <p>📍 Cobblestone Lane, Bangalore</p>
+        <p class="price">₹6,500/month</p>
+        <div class="rating">⭐ 4.5</div>
+        <a href="#" class="view-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pg-card">
+      <img src="https://img.freepik.com/premium-photo/modern-luxury-living-room_1310085-52273.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="Rose Arbor">
+      <div class="pg-details">
+        <h3>Rose Arbor</h3>
+        <p>📍 Regent's Row, Pune</p>
+        <p class="price">₹5,200/month</p>
+        <div class="rating">⭐ 4.3</div>
+        <a href="#" class="view-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pg-card">
+      <img src="https://img.freepik.com/premium-photo/kids-bedroom-with-bunk-beds-window_305343-52273.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="Kusum Kunj">
+      <div class="pg-details">
+        <h3>Kusum Kunj</h3>
+        <p>📍 Lumina Corner, Kolkata</p>
+        <p class="price">₹7,000/month</p>
+        <div class="rating">⭐ 4.8</div>
+        <a href="#" class="view-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pg-card">
+      <img src="https://img.freepik.com/premium-photo/hostel-dormitory-beds-arranged-dorm-room-with-white-plain-bunk-bed-dormitoryhostel-dormitory-have-many-beds-arranged-one-room-clean-hostel-small-room-with-wooden-bunk-beds-small-hotel_867041-35.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="Stone Hurst">
+      <div class="pg-details">
+        <h3>Stone Hurst</h3>
+        <p>📍 Noida Sector 62</p>
+        <p class="price">₹8,000/month</p>
+        <div class="rating">⭐ 4.6</div>
+        <a href="#" class="view-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="pg-card">
+      <img src="https://img.freepik.com/premium-photo/luxury-interior-design-modern-house_305343-3661.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt="Valley Vista">
+      <div class="pg-details">
+        <h3>Valley Vista</h3>
+        <p>📍 Karol Bagh, Delhi</p>
+        <p class="price">₹7,200/month</p>
+        <div class="rating">⭐ 4.4</div>
+        <a href="#" class="view-btn">View Details</a>
+      </div>
+
+
+       <!-- More PGs (add as needed) -->
+       <div class="pg-card"><img src="https://img.freepik.com/premium-photo/luxury-room-with-bed-warm-light-india-style_24637-629.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>City View PG</h3><p>📍 Andheri, Mumbai</p><p class="price">₹6,200/month</p><div class="rating">⭐ 4.6</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/free-photo/luxury-bedroom-with-elegant-decoration_1150-10836.jpg" alt=""><div class="pg-details"><h3>Elite Living</h3><p>📍 Banjara Hills, Hyderabad</p><p class="price">₹7,800/month</p><div class="rating">⭐ 4.7</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/free-photo/3d-rendering-luxury-bedroom-suite-resort-hotel-with-twin-bed-living_105762-2018.jpg?ga=GA1.1.1406031230.1744216748&semt=ais_country_boost&w=740" alt=""><div class="pg-details"><h3>Serene Stay</h3><p>📍 Salt Lake, Kolkata</p><p class="price">₹5,400/month</p><div class="rating">⭐ 4.4</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/free-photo/young-friends-hostel_52683-121727.jpg?ga=GA1.1.1406031230.1744216748&semt=ais_country_boost&w=740" alt=""><div class="pg-details"><h3>Comfort Corner</h3><p>📍 Civil Lines, Delhi</p><p class="price">₹6,000/month</p><div class="rating">⭐ 4.2</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/premium-photo/clean-minimalistic-hostel-room-with-bunk-bed-white-bedding-small-wooden-bedside-table-ideal-budget-travelers-seeking-affordable-accommodation-cheap-hostels-save-money_429124-7216.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Budget PG</h3><p>📍 Sector 62, Noida</p><p class="price">₹4,500/month</p><div class="rating">⭐ 4.0</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/premium-photo/italy-mediterranean-sea-fiumicino-rome-10-july-2003-luxury-yacht-guests-bedroom-editorial-film-scan_857279-12673.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Vista Rooms</h3><p>📍 Navi Mumbai</p><p class="price">₹5,900/month</p><div class="rating">⭐ 4.6</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/premium-photo/small-room-with-bed-that-has-tv-top-it_1081342-40399.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Harmony Homes</h3><p>📍 Wakad, Pune</p><p class="price">₹6,100/month</p><div class="rating">⭐ 4.4</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/premium-photo/bedroom-apartment-bed-wardrobe-bedside-tables_278455-3985.jpg?ga=GA1.1.1406031230.1744216748&w=740" alt=""><div class="pg-details"><h3>Tranquil PG</h3><p>📍 Whitefield, Bangalore</p><p class="price">₹6,300/month</p><div class="rating">⭐ 4.7</div><a href="#" class="view-btn">View Details</a></div></div>
+       <div class="pg-card"><img src="https://img.freepik.com/free-photo/3d-rendering-luxury-modern-bedroom-suite-hotel-with-tv-cabinet_105762-2274.jpg?ga=GA1.1.1406031230.1744216748&w=740"  alt=""><div class="pg-details"><h3>Metro Nest</h3><p>📍 Lajpat Nagar, Delhi</p><p class="price">₹6,800/month</p><div class="rating">⭐ 4.8</div><a href="#" class="view-btn">View Details</a></div></div>
+     </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Apna PG. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // You can add interactive scripts here if needed
+  </script>
+</body>
+</html>
